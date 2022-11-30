@@ -4,7 +4,7 @@ public interface ISubString {
 
 	public boolean isSubString(String text);
 	
-	public double avgTimeInMsToSubString();
+	public double avgTimeInUsToSubString();
 	
 	public long avgTextLength();
 }

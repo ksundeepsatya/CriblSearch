@@ -21,6 +21,7 @@ public class RabinKarpStringSearch extends SubStringBase {
 	protected boolean isSubStringInternal(String text) {
 		int M = searchCharArray.length;
         int N = text.length();
+        if (N< M) return false;
         int i, j;
         int p = 0; // hash value for searchString
         int t = 0; // hash value for text

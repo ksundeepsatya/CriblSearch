@@ -8,7 +8,7 @@ public abstract class SubStringBase implements ISubString {
 
     private long totalLength = 0L;
     private long numCalls = 0L;
-    private long totalTimeinMs = 0L; 
+    private long totalTimeinUs = 0L; 
     protected String searchString;
     public SubStringBase(String searchString)
     {
@@ -21,20 +21,20 @@ public abstract class SubStringBase implements ISubString {
 		boolean result = isSubStringInternal(text);
 		stopwatch.stop();
 
-		long millis = stopwatch.elapsed(TimeUnit.MILLISECONDS);
+		long micros = stopwatch.elapsed(TimeUnit.MICROSECONDS);
 		
 		totalLength+=text.length();
 		numCalls++;
-		totalTimeinMs+=millis;
+		totalTimeinUs+=micros;
 		return result;
 	}
 	
 	protected abstract boolean isSubStringInternal(String text);
 	
 	@Override
-	public double avgTimeInMsToSubString() {
+	public double avgTimeInUsToSubString() {
 		// TODO Auto-generated method stub
-		return (double) totalTimeinMs/numCalls;
+		return (double) totalTimeinUs/numCalls;
 	}
 
 	@Override

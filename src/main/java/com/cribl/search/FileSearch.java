@@ -44,6 +44,11 @@ public class FileSearch {
 				if (list.size() == n && readerType != FileReadType.ForwardRead)
 					break;
 			}
+			
+			System.out.println("Average Time to read a line in micro seconds: " + reader.avgTimeToReadLineInMicroSeconds());
+			System.out.println("Average Time to search a line in micro seconds: " + subString.avgTimeInUsToSubString());
+			System.out.println("Average line length in micro seconds: " + reader.avgReadLength());
+			
 		}
 
 		if (readerType == FileReadType.ForwardRead)

@@ -32,7 +32,7 @@ public class SubStringTest {
 		search  = new RabinKarpStringSearch(word);
 		testSubStringNotFound(search);
 		
-		double c = search.avgTimeInMsToSubString();
+		double c = search.avgTimeInUsToSubString();
 	}
 	
 	@Test

@@ -44,8 +44,12 @@ public class App {
 					SearchAlogType searchAlgoType = Enum.valueOf(SearchAlogType.class,
 							searchType == null ? "Default" : searchType);
 
-					System.out.println("File Path:" + filePath + " search Word: " + search + " numLine: " + numLines
-							+ " fileReadType: " + fileReadType + " searchAlgoType:" + searchAlgoType);
+					// read all lines
+					if (numLines == 0)
+						fileReadType=FileReadType.ForwardRead;
+					
+					System.out.println("File Path:" + filePath + ", search Word: " + search + ", numLine: " + numLines
+							+ ", fileReadType: " + fileReadType + ", searchAlgoType:" + searchAlgoType);
 
 					Stopwatch stopwatch = Stopwatch.createStarted();
 					// Main Logic
