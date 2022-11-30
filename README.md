@@ -38,7 +38,7 @@ http://localhost:8000/search?filePath=install.log&search=DYLD_NO_FIX_PREBINDING&
 ### Notes
 - Main consideration for this project is time, there are lot of improvements and features that can be added. But, had to time bound to one day that limits the functionality.
 - Impletemted multiple search and file read options. Each one has pros and cons.  Added logging to identify what algorithm works best for different files. We can benchmark them as we do more searches. Then we can build some huristics based on file pattern
-- Why docker? Easier control on files that this servive has, memory and cpu allocation is easy, easy to package and test given I am not sure how familiar the reviwer of the code is with Java.
+- Why docker? Easier control on files that this service has access to, memory and cpu allocation is easy, easy to package and test given I am not sure how familiar the reviwer of the code is with Java environment.
 - Not great exception handling
 
 ### Performance
