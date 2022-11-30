@@ -1,3 +1,6 @@
+### Problem statement:
+A customer has asked you for a way to provide on-demand monitoring of various unix-based servers without having to log into each individual machine and opening up the log files found in /var/log. The customer has asked for the ability to issue a REST request to a machine in order to retrieve logs from /var/log on the machine receiving the REST request.
+
 ### How to Run
 
 - Install docker from https://docs.docker.com/engine/install/
